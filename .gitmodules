@@ -1,0 +1,3 @@
+[submodule "forked-libraries/libpd"]
+	path = forked-libraries/libpd
+	url = git@github.com:libpd/libpd.git
