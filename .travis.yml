@@ -1,0 +1,9 @@
+# OMSPD Travis Builder
+# JUCE enhanced for freshness
+os: osx
+
+osx_image: xcode11.3
+install: ./travis-build-setup.sh
+script: ./travis-build.sh
+deploy: ./travis-deploy.sh
+
