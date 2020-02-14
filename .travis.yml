@@ -1,9 +1,18 @@
-# OMSPD Travis Builder
-# JUCE enhanced for freshness
 os: osx
-
 osx_image: xcode11.3
-install: ./travis-build-setup.sh
-script: ./travis-build.sh
-script: ./travis-deploy.sh
+install: "./travis-build-setup.sh"
+script:
+- "./travis-build.sh"
+- "./travis-deploy.sh"
+deploy:
+  provider: releases
+  api_key:
+    secure: m5mBvvL6+rd9xSnfFlCUu4C+cGQWElEyA2hnWOa4a1JWk/QwFb96sjmUzR3J1OX9C2mZ5XHIbzdNX02HAC6iLKxlPZQ1dajpHE6fsUlOw4xonhLoW/iLDXOZakc4+nIUf5nzPHqdSBK3loDm4WzLbKgfBF6PBIcrwlQ+BGCUwG0/0Uz5HSM1pBnO/TVhY1v0XXSYvChP3Dy193Z0gmaX4wjDD+U7bM38JTtdLk0S/OCzMEXXni5Bi+vkoAdiltLTokfr2vmbkar1ReGuX7xII1sRHKYf6/tPcRkXoG2wnneVR9o78YJgKZZ4YGlqsWYnjw6L3t/G90fq/zWwOD2Z8p8Eh9bTm2ssOeKlhd67/h8FkJH3gTZ8ge0U9Ql0ZBuq2ov66ijNT8GxSWBcXAsbqBYvNkLciBhjIaUH2zfldxSjtzstX93sLUCCz0B7j4yGOOln7tcM5tIafxO4NQIFlZ4uHCWvOq2jvLI26dOESM34g9WcVurcaL0UzStGazCRBva/8jFJD1xceZRCySVqp+Q/Q2vZ9oVvWBkjGZAgVLHSuCWpwLl+MoWo2kizchHM2wPBiJT8cdU096sRrUvyl2IWbtsJAJrEubgbvuEjnrNwSCCODo19PsAl1gos/M9RLof9VlL1IqGJaq2DmOxi3OQp0O1q3qdC5zgrw8xPd0E=
+  file: 
+  - "./build/OMSPD.app.zip"
+  - "./build/OMSPD.vst3.zip"
+  - "./build/OMSPD.component.zip"
+  skip_cleanup: true
+  on:
+    tags: true
 
