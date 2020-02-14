@@ -1,3 +1,6 @@
 [submodule "forked-libraries/libpd"]
 	path = forked-libraries/libpd
 	url = https://github.com/libpd/libpd.git
+[submodule "forked-libraries/vst3sdk"]
+	path = forked-libraries/vst3sdk
+	url = https://github.com/steinbergmedia/vst3sdk.git
