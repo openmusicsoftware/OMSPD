@@ -97,6 +97,8 @@ void OmspdAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
+    lpd.init(2, 2, (int)sampleRate);
+    
 }
 
 void OmspdAudioProcessor::releaseResources()

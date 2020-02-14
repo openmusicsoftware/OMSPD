@@ -9,6 +9,8 @@
               pluginChannelConfigs="{1,1},{2,2}">
   <MAINGROUP id="tMkfyZ" name="OMSPD">
     <GROUP id="{ADF08019-58E2-4FA3-7548-AB539141DE93}" name="Source">
+      <FILE id="tjFQhU" name="PdObject.cpp" compile="1" resource="0" file="Source/PdObject.cpp"/>
+      <FILE id="EPq8UC" name="PdObject.h" compile="0" resource="0" file="Source/PdObject.h"/>
       <FILE id="fFrkgb" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="yqSovY" name="PluginProcessor.h" compile="0" resource="0"
@@ -22,9 +24,9 @@
     <XCODE_MAC targetFolder="Builds/MacOSX" vst3Folder="forked-libraries/vst3sdk"
                externalLibraries="pd-osx">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" headerPath="$(PROJECT_DIR)/../../forked-libraries/libpd/build/Debug/usr/local/include"
+        <CONFIGURATION isDebug="1" name="Debug" headerPath="$(PROJECT_DIR)/../../forked-libraries/libpd/build/Debug/usr/local/include&#10;$(PROJECT_DIR)/../../forked-libraries/libpd/pure-data/src&#10;$(PROJECT_DIR)/../../forked-libraries/libpd/libpd_wrapper&#10;$(PROJECT_DIR)/../../forked-libraries/libpd/libpd_wrapper/util&#10;$(PROJECT_DIR)/../../forked-libraries/libpd/cpp&#10;&#10;"
                        libraryPath="$(PROJECT_DIR)/../../forked-libraries/libpd/build/Debug"/>
-        <CONFIGURATION isDebug="0" name="Release" headerPath="$(PROJECT_DIR)/../../forked-libraries/libpd/build/Release/usr/local/include"
+        <CONFIGURATION isDebug="0" name="Release" headerPath="$(PROJECT_DIR)/../../forked-libraries/libpd/build/Release/usr/local/include&#10;$(PROJECT_DIR)/../../forked-libraries/libpd/pure-data/src&#10;$(PROJECT_DIR)/../../forked-libraries/libpd/libpd_wrapper&#10;$(PROJECT_DIR)/../../forked-libraries/libpd/libpd_wrapper/util&#10;$(PROJECT_DIR)/../../forked-libraries/libpd/cpp&#10;"
                        libraryPath="$(PROJECT_DIR)/../../forked-libraries/libpd/build/Release"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
